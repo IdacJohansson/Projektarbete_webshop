@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <h1 class="header">Place order</h1>
-<article>
 <body>
+    <article>
     <nav class="menue">
         <a class="active" href="shop.html">Shop</a>
         <a href="contact.html">Contact</a>
@@ -23,18 +23,42 @@
 
     <div class="container">
         <div class="box">
+        <div class="col">
+            <h1>Order-form</h1>
+            <form>
+                <div class="row">
+                    <div class="col form-floating">
+                     <!--Split och lägg till postal code-->
+                            <input type="text" id="name" class="form-control" placeholder="first-name">
+                            <label for="first-name" class="form-label">First name</label>
+                        </div>
+                        <div class="col form-floating">
+                                <input type="text" id="name" pattern="0-9{5}" class="form-control" placeholder="last-name">
+                                <label for="last-name" class="form-label">Last name</label>
+                        </div>
+                    </div>
+            </form>
             <form>
                 <div class="form-floating">
-                    <input type="text" id="name" class="form-control" placeholder="name">
-                    <label for="full name" class="form-label">Full name</label>
+                    <input type="text" id="adress" class="form-control" placeholder="address">
+                    <label for="Address" class="form-label">Address</label>
                 </div>
             </form>
+
             <form>
-                <div class="form-floating"> <!--Split och lägg till postal code-->
-                    <input type="adress" id="Shipping" class="form-control" placeholder="adress">
-                    <label for="adress" class="form-label">Adress</label>
-                </div>
+                <div class="row">
+                    <div class="col form-floating">
+                     <!--Split och lägg till postal code-->
+                            <input type="text" id="city" class="form-control" placeholder="city">
+                            <label for="city" class="form-label"> City</label>
+                        </div>
+                        <div class="col form-floating">
+                                <input type="text" id="zip" pattern="0-9{5}" class="form-control" placeholder="zip">
+                                <label for="zip" class="form-label">Zip code</label>
+                        </div>
+                    </div>
             </form>
+
             <form>
                 <div class="form-floating"> 
                     <input type="tel" id="tel" class="form-control" placeholder="Phone">
@@ -46,21 +70,22 @@
                     <input type="email" id="email" class="form-control" placeholder="Enter email here">
                     <label for="email" class="form-label">Email</label>
                 </div>
+                <div class="order-button"><button type="button" class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
             </form>
-            <button>Place order</button>
+            
 
             
         </div>
-        
-        
+      </div>
     </div>
+    <br>
     
     
 
 <footer class="footer">
       <p>Copyright &copy; 2023 – Shop<br>
       <a href="contact.html">Contact</a></p>
-</footer>  
+</footer> 
 </article>  
 </body>
 </html>

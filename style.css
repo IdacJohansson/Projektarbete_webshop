@@ -59,18 +59,30 @@ article {
     float: right;
   }
 
+
   /*Order-form*/
+
+  .container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
   
   .box{
     background-color: #6c4a85;
     color: #000;
-    width: 500px;
+    width: 800px;
     border: 5px solid rgb(0, 0, 0);
     padding: 50px;
-    margin: 20px;
-    position: absolute;
-    float: left;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    
+  }
+  .form-floating{
+    margin: 7px; 
+  }
+  .order-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
   }
