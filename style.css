@@ -78,31 +78,43 @@ article {
 
 /*Produktsida*/
 
+.product-body{
+  
+}
+
 .col{
   background-color: coral;
   text-align: center;
   width: 350px;
   height: 350px;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  transition: transform .3s;
 }
 
-.box{
-  background-color: coral;
-  text-align: center;
-  width: 350px;
-  height: 350px;
-}
-
-.hhh{
-  display: none;
-  text-align: center;
-  font-size: large;
-  background-color: cadetblue;
-}
-
-.col :hover+.hhh{
+.col:hover{
   background-color:aquamarine;
-  width: 500px;
-  height: 500px;
-  display: block;
-  /*Insert desc for product*/
+  transform: scale(1.3);
+  visibility: visible;
 }
+
+.descriptionText{
+  visibility: hidden;
+}
+
+.product-header{
+  background-color: bisque;
+  text-align: center;
+  font-family: 'Times New Roman';
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.product-head{
+  
+}
+
+
+

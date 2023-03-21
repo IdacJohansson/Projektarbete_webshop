@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="product-head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
@@ -9,22 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Product page</h1>
+<body class="product-body">
+    <script src="products.js"></script>
+    <h1 class="product-header">Product page</h1>
     <div class="container">
-        <div class="row row-cols-3 g-2">
+        <div class="row row-cols-3">
             <div class="col">
-                Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
-                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"; width="300px"; height="300px">
-                <div class="hhh">PRODUCT DESCRIPTION</div>
+                productList[0].title
+                <img title="Add to cart"  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="BILD" width="270px"; height="270px">
+                <div class="descriptionText">Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</div>
             </div>
             <div class="col">
-                Second
+                productList[1].title
+                <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="BILD" width="270px"; height="270px">
+                <div class="zoom", title="This is the description"></div>
             </div>
             <div class="col">
-                Third product
+                Product
+            </div>
+            <div class="col">
+                Product
+            </div>
+            <div class="col">
+                Product
+            </div>
+            <div class="col">
+                Product
+            </div>
         </div>
     </div>
-    <script src="products.js"></script>
 </body>
 </html>
