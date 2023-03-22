@@ -22,6 +22,12 @@ console.log(pList)*/
             .then(res=>res.json())
             .then(json=>console.log(json))*/
 
+/*let kalas = [];
+kalas.push(fetch('https://fakestoreapi.com/products/1')
+    .then(res=>res.json())
+    .then(json=>console.log(json)))
+
+console.log(kalas)*/
 
 /*fetch(url)
     .then(response => {
@@ -38,7 +44,7 @@ console.log(pList)*/
 
 
 
-/*let productList = [];
+let productList = [];
     (function() {
         fetch(url)
             .then(response => response.json())
@@ -50,7 +56,7 @@ console.log(pList)*/
 
 setTimeout (() => {
     console.log("data in timeout", productList)
-}, 1000)*/
+}, 1000)
 
 
 
