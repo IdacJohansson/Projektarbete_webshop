@@ -24,6 +24,7 @@ function showProducts(data) {
                 '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
                 '<p class="product-price">' + data[i].price + '</p>'+
             '</div>' +
+            
             '<div class="modal fade modal-xl" id="product-modal' + i + '">' +
                 '<div class="modal-dialog modal-dialog-centered">' +
                     '<div class="modal-content">' +
@@ -41,7 +42,7 @@ function showProducts(data) {
                             '</div>' +
                         '</div>' +
                     '</div>' +
-            '</div>';
+            '</div>'; 
         allProducts.appendChild(element);
     }
 }
