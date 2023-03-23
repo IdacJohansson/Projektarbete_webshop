@@ -104,6 +104,10 @@ article {
   
 }
 
+.product-button{
+  
+}
+
 .col{
   background-color: white;
   text-align: center;
@@ -131,8 +135,13 @@ article {
   text-align: center;
 }
 
+.product-hidden {
+  display: none;
+}
+
 .product-image{
   width: 300px;
   height: 300px;
 }
+
 

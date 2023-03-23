@@ -19,29 +19,25 @@ function showProducts(data) {
     for(let i = 0; i < data.length; i++) {
         const element = document.createElement("div");
         element.innerHTML = 
-            '<div class="product-button" data-bs-toggle="modal"' + ' data-bs-target="#product-modal' + i + '">' +
-                '<p class="product-title">' + data[i].title + '</p>' +
-                '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
-                '<p class="product-price">' + data[i].price + '</p>'+
+            '<div class="col">' + 
+                '<div class="product-button"' + i + '">' +
+                    '<p class="product-title">' + data[i].title + '</p>' +
+                    '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                    '<p class="product-price">' + "$" + data[i].price + '</p>' +
+                '</div>' +
             '</div>' +
-            '<div class="modal fade modal-xl" id="product-modal' + i + '">' +
-                '<div class="modal-dialog modal-dialog-centered">' +
-                    '<div class="modal-content">' +
-                        '<div class="modal-body">' +
-                            '<div class="product-modal">' +
-                                '<h1 class="product-price">' + data[i].price + " €" + '</h1>' + '<br>' +
-                                '<p class="product-category">' + data[i].category + '</p>' + '<br>' +
-                                '<h2 class="product-title">' + data[i].title + '</h2>' + '<br>' +
-                                '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' + '<br>' +
-                                '<p class="description">' + data[i].description + '</p>' +
-                                '<div class="modal-footer justify-content-center"> ' +
-                                    '<button class="btn btn-primary opacity-90 col-2 mx-3" id="order-button">Order</button> ' +
-                                    '<button class="btn btn-danger opacity-90 col-2 mx-3" data-bs-dismiss="modal">Exit</button></div> ' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
+            '<div class="modal fade modal-xl" id="product-modal' + i + '>' +
+                '<div class="col">' +
+                    '<div class="product-hidden">' +
+                        '<h2 class="product-title">' + data[i].title + '</h2>' +
+                        '<p class="product-category">' + data[i].category + '</p>' +
+                        '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                        '<h4 class="product-price">' + "$" + data[i].price + '</h4>' +
+                        '<p class="description">' + data[i].description + '</p>' +
                     '</div>' +
+                '</div>' +
             '</div>';
         allProducts.appendChild(element);
     }
 }
+
