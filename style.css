@@ -91,12 +91,12 @@ article {
   background-color:#f6e7cb;
 }
 
-.productPrice{
+.product-price{
   border-top: 2px solid black;
   border-radius: 10px;
 }
 
-.productTitle{
+.product-title{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #f6e7cb;
   border-radius: 5px;
@@ -127,5 +127,12 @@ article {
   background-color: #f6e7cb;
 }
 
+.products-footer{
+  text-align: center;
+}
 
+.product-image{
+  width: 300px;
+  height: 300px;
+}
 
