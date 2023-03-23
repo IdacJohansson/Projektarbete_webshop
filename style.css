@@ -92,7 +92,6 @@ article {
 }
 
 .productPrice{
-  
   border-top: 2px solid black;
   border-radius: 10px;
 }
@@ -126,14 +125,6 @@ article {
 
 .container-fluid{
   background-color: #f6e7cb;
-}
-
-.descriptionText{
-  visibility: hidden;
-}
-
-.product-head{
-  
 }
 
 
