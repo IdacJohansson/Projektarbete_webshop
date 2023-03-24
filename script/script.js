@@ -41,6 +41,20 @@ function enableSubmit(){
     btn.disabled = !isValid;
     }
 
+   
+ 
 
+const buttonElement = document.getElementById("btn");
+buttonElement.addEventListener("click", goToPage); 
 
+function goToPage(){
+window.location ="order-confirmation.html";
+}
+
+      
+
+function orderButtonClick(){
+    enableSubmit()
+
+}
 
