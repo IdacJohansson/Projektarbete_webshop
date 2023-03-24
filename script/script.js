@@ -71,7 +71,7 @@ orderForm.addEventListener("submit", (e) => {
   if (firstName.value == "" || lastname.value == "") {
     alert("Ensure you input a value in both fields!");
   } else {
-    // perform operation with form input
+    
     alert("This form has been successfully submitted!");
     console.log(
       `This form has a first name of ${firstName.value} and lastname of ${lastname.value}`
