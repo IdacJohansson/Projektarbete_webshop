@@ -134,6 +134,10 @@ article {
 
 /*Produktsida*/
 
+.product-head{
+  background-color: #a6c48a;
+}
+
 .product-header{
   background-color: #a6c48a;
   text-align: center;
@@ -147,7 +151,7 @@ article {
   background-color:#f6e7cb;
 }
 
-#order-button{
+#add-to-cart-button{
   background-color:#f6e7cb;
   border-radius: 5px;
 }
@@ -159,9 +163,8 @@ article {
 
 .product-title{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f6e7cb;
   border-radius: 5px;
-  border: 2px solid #a6c48a;
+  height: 78px;
 }
 
 .product-title-inside{
@@ -171,18 +174,20 @@ article {
   border: 2px solid #a6c48a;
 }
 
-.col{
+#getProducts{
+  width: 1400px;
+}
+
+#colPro{
   background-color: white;
   text-align: center;
   border: 3px solid #a6c48a;
-  width: 390px;
+  width: 300px;
   height: auto;
   border-radius: 15px;
   padding: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 70px;
   margin-bottom: 15px;
-  transition: transform .3s;
 }
 
 /*.col:hover{
@@ -203,8 +208,8 @@ article {
 }
 
 .product-image{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   transition: transform .3s;
 }
 
@@ -218,5 +223,7 @@ article {
   border: 3px solid #a6c48a;
   border-radius: 15px;
 }
+
+
 
 

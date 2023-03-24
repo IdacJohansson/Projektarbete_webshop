@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: #a6c48a;">
 <head class="product-head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="product-body" onload="fetchProduct()">
+<body class="product-body" onload="fetchProduct()"> <!-- Running fetch -->
     <script src="products.js"></script> 
     <header class="product-header">
         <h1>Shop</h1>
         <a href="contact.html">Contact us</a>
-        <a href="order.html" class="split"><i class="fa fa-fw fa-shopping-cart"></i>Order</a>
+        <a href="order-form.html" class="split"><i class="fa fa-fw fa-shopping-cart"></i>Order</a>
     </header>
 
     <main class="container-fluid">
-        <div class="row">
-            <div class="row-cols-3">
-                <div id="getProducts"> <!-- fetching products -->
-                </div>
-            </div>
+        <div class="row" id="getProducts"> <!-- Inserting products here -->
         </div>
     </main>
 
