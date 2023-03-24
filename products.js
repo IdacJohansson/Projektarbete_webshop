@@ -1,94 +1,43 @@
 const url = "https://mocki.io/v1/a99e6cf4-1e5a-4b0e-bc57-6c651f0f09cd";
 const url2 = "https://fakestoreapi.com/products";
 
-
-
-/*let pList = [];
-async function fetchProducts() {
-    const response = await fetch(url);
-    const dataList = await response.json();
-}
-const getProducts = async() => {
-    const response = await fetch(url)
-    return await response.json()
-}
-pList = getProducts;
-console.log(pList)*/
-
-
-
-
-/*fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=>console.log(json))*/
-
-/*let kalas = [];
-kalas.push(fetch('https://fakestoreapi.com/products/1')
-    .then(res=>res.json())
-    .then(json=>console.log(json)))
-
-console.log(kalas)*/
-
-/*fetch(url)
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        data.forEach(product => {
-            let desc = product.description;
-            let title = product.title;
-            let id = product.id;
+function fetchProduct() {
+    fetch(url)
+        .then(function(response) {
+            return response.json();
         })
-    })*/
+        .then(function(data) {
+            showProducts(data);
+        })
+        .catch(function(err) {
+            console.log("Fel: " + err)
+        });
+}
 
 
-
-
-let productList = [];
-    (function() {
-        fetch(url)
-            .then(response => response.json())
-            .then(json => {
-                productList = [...json]
-            })
+function showProducts(data) {
+    const allProducts = document.getElementById("getProducts");
+    for(let i = 0; i < data.length; i++) {
+        const element = document.createElement("div");
+        element.classList.add("col-md-3", "col-sm-6");
+        element.innerHTML = 
+            '<div class="col" id="colPro">' + 
+                '<div class="product-title" title=" '+ data[i].description +' ">' + data[i].title + '</div>' +
+                '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                '<p class="product-price">' + "$" + data[i].price + '</p>' +
+                '<button id="add-to-cart-button">Add to cart</button>'
+            '</div>' +   
+            '<div" class="product-hidden"' + i + '>' +
+                '<div class="col" id="colPro">' +
+                    '<div">' +
+                        '<h4 class="product-title-inside">' + data[i].title + '</h4>' +
+                        '<p class="product-category">' + data[i].category + '</p>' +
+                        '<img src=' + data[i].image + ' class="product-image-inside" alt="BILD SAKNAS">' +
+                        '<h4 class="product-price">' + "$" + data[i].price + '</h4>' +
+                        '<p class="product-description">' + data[i].description + '</p>' +
+                    '</div>' +
+                '</div>' +
+            '</div>'; 
+        allProducts.appendChild(element);
     }
-)();
-
-setTimeout (() => {
-    console.log("data in timeout", productList)
-}, 1000)
-
-
-
-
-/*let thisList = 
-    (async function fetchProducts() {
-        const response = await fetch(url);
-        const dataList = await response.json();
-    })
-    const getProducts = async() => {
-        const response = await fetch(url)
-        return await response.json()
-}*/
-
-
-function getThing(id) {
-    sessionStorage.setItem('product-id', id);
-    fetch(`https://fakestoreapi.com/products/${id}`)
-        .then(res => {
-            return res.json();
-        })
-        .then(product => {
-            const imageURL = product.image;
-            sessionStorage.setItem('product-img', imageURL);
-            sessionStorage.setItem('product-title', product.title);
-            sessionStorage.setItem('product-category', product.category);
-            sessionStorage.setItem('product-description', product.description);
-            sessionStorage.setItem('product-price', product.price);
-        })
 }
-
-
-console.log(getThing(1))
-
-console.log("TEST")
