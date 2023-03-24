@@ -64,7 +64,7 @@
                     <input type="email" id="email" class="form-control" placeholder="Enter email here" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required title="E-postadressen måste innehålla @" onkeyup="enableSubmit()">
                     <label for="email" class="form-label">Email</label>
                 </div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="orderButtonClick(); window.location.href = 'order-confirmation.html';" disabled class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
+                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="orderButtonClick()" formaction="order-confirmation.html" disabled class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
                 
             </form>
                 
