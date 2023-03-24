@@ -1,3 +1,4 @@
+// LocalStorage
 function getdata(){
     const na = document.getElementById("name").value;
     const ln = document.getElementById("lastname").value;
@@ -41,15 +42,21 @@ function enableSubmit(){
     btn.disabled = !isValid;
     }
 
-   
-
-
-
-      
 
 function orderButtonClick(){
     enableSubmit()
     
 
 }
+
+function getDatabyId(){
+    const dataName = document.getElementById("name");
+    const ln = document.getElementById("lastname");
+    const ad = document.getElementById("adress");
+    const ci = document.getElementById("city");
+    const zi = document.getElementById("zip");
+    const ph = document.getElementById("phone");
+    const em = document.getElementById("email");
+}
+
 
