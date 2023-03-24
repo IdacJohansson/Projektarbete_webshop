@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script/script.js"></script>
+    
+</head>
+<h1 class="header">Place order</h1>
+<body>
+    <article>
+    <nav class="menue">
+        <a class="active" href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+        <a href="order-form.html" class="split"><i class="fa fa-fw fa-shopping-cart"></i>Order</a>
+    </nav>
+    
+    <p>Mer info om produkten + beställningsformulär</p>
+
+    <div class="container">
+        <div class="box">
+        <div class="col">
+            <h1>Order-form</h1>
+            <form>
+                <div class="row">
+                    <div class="col form-floating">
+                     <!--Split-->
+                            <input type="text" id="name" class="form-control" placeholder="first-name" pattern=".{2,50}" required onkeyup="enableSubmit()" title="The first name must contain 2-50 letters">
+                            <label for="first-name" class="form-label">First name</label>
+                        </div>
+                        <div class="col form-floating">
+                                <input type="text" id="lastname" class="form-control" placeholder="last-name" pattern=".{2,50}" required onkeyup="enableSubmit()" title="The last name must contain 2-50 letters">
+                                <label for="last-name" class="form-label">Last name</label>
+                        </div>
+                    </div>
+                <div class="form-floating">
+                    <input type="text" id="adress" class="form-control" placeholder="address" pattern=".{4,50}" required onkeyup="enableSubmit()">
+                    <label for="Address" class="form-label">Address</label>
+                </div>
+            
+                <div class="row">
+                    <div class="col form-floating">
+                     <!--Split-->
+                            <input type="text" id="city" class="form-control" placeholder="city" pattern=".{2,50}" required onkeyup="enableSubmit()">
+                            <label for="city" class="form-label"> City</label>
+                        </div>
+                        <div class="col form-floating">
+                                <input type="text" id="zip" class="form-control" placeholder="zip" required title="Exakt 6 tecken i format: 000 00" onkeyup="enableSubmit()">
+                                <label for="zip" class="form-label">Zip code</label>
+                        </div>
+                    </div>
+                <div class="form-floating"> 
+                    <input type="tel" id="phone" class="form-control" placeholder="Phone" maxlength="50" required onkeyup="enableSubmit()">
+                    <label for="Phone" class="form-label">Phone</label>
+                </div>
+            
+                <div class="form-floating">
+                    <input type="email" id="email" class="form-control" placeholder="Enter email here" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required title="E-postadressen måste innehålla @" onkeyup="enableSubmit()">
+                    <label for="email" class="form-label">Email</label>
+                </div>
+                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="orderButtonClick()" formaction="order-confirmation.html" disabled class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
+                
+            </form>
+                
+            
+        </div>
+      </div>
+    </div>
+    <br>
+
+    
+    
+
+<footer class="footer">
+      <p>Copyright &copy; 2023 – Shop<br>
+      <a href="contact.html">Contact</a></p>
+</footer> 
+</article>  
+</body>
+</html>
