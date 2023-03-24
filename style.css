@@ -91,6 +91,11 @@ article {
   background-color:#f6e7cb;
 }
 
+#order-button{
+  background-color:#f6e7cb;
+  border-radius: 5px;
+}
+
 .product-price{
   border-top: 2px solid black;
   border-radius: 10px;

@@ -24,6 +24,7 @@ function showProducts(data) {
                     '<p class="product-title">' + data[i].title + '</p>' +
                     '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
                     '<p class="product-price">' + "$" + data[i].price + '</p>' +
+                    '<button id="order-button">Add to cart</button>'
                 '</div>' +
             '</div>' +
             '<div" class="product-hidden"' + i + '>' +
