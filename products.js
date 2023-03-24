@@ -26,17 +26,17 @@ function showProducts(data) {
                     '<p class="product-price">' + "$" + data[i].price + '</p>' +
                 '</div>' +
             '</div>' +
-            '<div class="modal fade modal-xl" id="product-modal' + i + '>' +
+            '<div" class="product-hidden"' + i + '>' +
                 '<div class="col">' +
-                    '<div class="product-hidden">' +
-                        '<h2 class="product-title">' + data[i].title + '</h2>' +
+                    '<div">' +
+                        '<h4 class="product-title-inside">' + data[i].title + '</h4>' +
                         '<p class="product-category">' + data[i].category + '</p>' +
-                        '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                        '<img src=' + data[i].image + ' class="product-image-inside" alt="BILD SAKNAS">' +
                         '<h4 class="product-price">' + "$" + data[i].price + '</h4>' +
-                        '<p class="description">' + data[i].description + '</p>' +
+                        '<p class="product-description">' + data[i].description + '</p>' +
                     '</div>' +
                 '</div>' +
-            '</div>';
+            '</div>'; 
         allProducts.appendChild(element);
     }
 }
