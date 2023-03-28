@@ -54,17 +54,19 @@
                 <div class="col">
                         <p>BILLING</p>
                         <p class="details">
-                           <ul>
-                            <li>First name:</li> 
-                            <li>Last name: </li>    
+                            <ul>
+                            <li >First name: <br>
+                                <span id="first-name"></span>
+                            </li> 
+                            <li>Last name: <br>
+                            <span id="last-name"></span></li>    
                             <li>Address:</li>    
                             <li>City:</li>    
                                 Zip code: 
                                 Phone: 
                                 Email: 
-
-                           </ul> 
-                            </p>
+                        </p>
+                            </ul>
                         
                     </div>
                     <div class="col">
@@ -83,6 +85,12 @@
             
         </div>
     </div>
+
+    <script>
+        const fn = localStorage.getItem("first-name"); 
+        document.getElementById("first-name").textContent = fn;  
+
+    </script>
 
    
     

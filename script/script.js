@@ -1,30 +1,61 @@
+// LocalStorage
 function getdata(){
-    const na = document.getElementById("name").value;
-    const ln = document.getElementById("lastname").value;
-    const ad = document.getElementById("adress").value;
-    const ci = document.getElementById("city").value;
-    const zi = document.getElementById("zip").value;
-    const ph = document.getElementById("phone").value;
-    const em = document.getElementById("email").value;
+    const orderForm = document.getElementById("orderForm"); 
+    const firstname = document.getElementById("firstname");
+    const lastname = document.getElementById("lastname");
+    const address = document.getElementById("adress");
+    const city = document.getElementById("city");
+    const zip = document.getElementById("zip");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
 
+    orderForm.addEventListener("submit", function(e){
+        e.preventDefault(); 
 
-    // Storing data
+        const firstNameValue = firstname.value; 
+        const lastNameValue = lastname.value;
+        const addressValue = address.value; 
+        const cityValue = city.value;
+        const zipValue = zip.value; 
+        const phoneValue = phone.value;
+        const emailValue = email.value; 
+        
 
-    const name = localStorage.setItem("name", na);
-    const lastname = localStorage.setItem("lastname", ln);
-    const adress = localStorage.setItem("address", ad);
-    const city = localStorage.setItem("city", ci);
-    const zip = localStorage.setItem("zipcode", zi);
-    const phone = localStorage.setItem("phone", ph);
-    const email = localStorage.setItem("email", em);
+        localStorage.setItem("first-name", firstNameValue); 
+        localStorage.setItem("last-name", lastNameValue); 
+        localStorage.setItem("address", addressValue); 
+        localStorage.setItem("city", cityValue); 
+        localStorage.setItem("zip", zipValue);
+        localStorage.setItem("phone", phoneValue); 
+        localStorage.setItem("email", emailValue); 
+
+        window.location.href = "order-confirmation.html"; 
+
+        
+    })
+
+    
+   
 
     for (let i = 0; i < localStorage.length; i++) {
         console.log("Key: " + localStorage.key(i));
         console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
     }
 
-        // Lägg till felmeddelande om inte alla fält är ifyllda vid place order
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function enableSubmit(){
     let inputs = document.getElementsByClassName('form-control'); 
@@ -39,17 +70,13 @@ function enableSubmit(){
     }
     }
     btn.disabled = !isValid;
-    }
+    } 
 
-   
-
-
-
-      
 
 function orderButtonClick(){
-    enableSubmit()
-    
-
+    enableSubmit(); 
+    getdata(); 
 }
+
+
 

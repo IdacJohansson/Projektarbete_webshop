@@ -27,11 +27,11 @@
         <div class="box">
         <div class="col">
             <h1>Order-form</h1>
-            <form>
+            <form action="" id="orderForm">
                 <div class="row">
                     <div class="col form-floating">
                      <!--Split-->
-                            <input type="text" id="name" class="form-control" placeholder="first-name" pattern=".{2,50}" required onkeyup="enableSubmit()" title="The first name must contain 2-50 letters">
+                            <input type="text" id="firstname" class="form-control" placeholder="first-name" pattern=".{2,50}" required onkeyup="enableSubmit()" title="The first name must contain 2-50 letters">
                             <label for="first-name" class="form-label">First name</label>
                         </div>
                         <div class="col form-floating">
@@ -64,8 +64,7 @@
                     <input type="email" id="email" class="form-control" placeholder="Enter email here" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" maxlength="50" required title="E-postadressen måste innehålla @" onkeyup="enableSubmit()">
                     <label for="email" class="form-label">Email</label>
                 </div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="orderButtonClick()" formaction="order-confirmation.html" disabled class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
-                
+                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="orderButtonClick()" disabled class="btn btn-outline-light"><i class="fa fa-fw fa-shopping-cart"></i>Place order</button></div>
             </form>
                 
             
