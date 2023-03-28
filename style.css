@@ -151,7 +151,7 @@ article {
   background-color:#f6e7cb;
 }
 
-#add-to-cart-button{
+.add-to-cart-button{
   background-color:#f6e7cb;
   border-radius: 5px;
 }
@@ -196,6 +196,10 @@ article {
 
 .products-footer{
   text-align: center;
+}
+
+#sendId {
+  
 }
 
 .product-hidden {
