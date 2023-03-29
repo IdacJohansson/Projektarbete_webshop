@@ -60,12 +60,9 @@ function showProducts(data) {
             '</div>'; 
         allProducts.appendChild(element);
 
-        const addToCartButton = element.querySelector(".addToCartButton");
-        addToCartButton.addEventListener("click", function()) {
-            const id = this.getAttribute("data-id");
-            window.location.href = "order-form.html" + id;
-        });
     }
 }
+
+
 
 //HEJHEJ
