@@ -15,9 +15,9 @@
 <body>
     <article>
     <nav class="menue">
-        <a class="active" href="shop.html">Shop</a>
+        <a class="active" href="products.html">Shop</a>
         <a href="contact.html">Contact</a>
-        <a href="order-form.html" class="split"><i class="fa fa-fw fa-shopping-cart"></i>Order</a>
+        <a href="order-form.html" class="split"><i class="fa fa-truck"></i>Order</a>
     </nav>
     <br>
     
@@ -89,9 +89,7 @@
             </div>
             <hr class="line">
             <img class="imgForm" src="images/Logo.png" alt="">
-
-            
-            
+            <div class="print-button"><button id="pbtn" value="pbtn" onclick="window.print();" class="btn btn-outline-light"><i class="fa fa-fw fa-print"></i>Print</button></div>
         </div>
     </div>
     <br>
@@ -118,8 +116,6 @@
 
     const ma = localStorage.getItem("email"); 
     document.getElementById("email").textContent = ma;
-       
-
     </script>
 
    
