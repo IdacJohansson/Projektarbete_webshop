@@ -1,8 +1,9 @@
 const url = "https://mocki.io/v1/a99e6cf4-1e5a-4b0e-bc57-6c651f0f09cd";
 const url2 = "https://fakestoreapi.com/products/";
 
+//Funktion som hämtar produkter
 function fetchProducts() {
-    fetch(url)
+    fetch(url2)
         .then(function(response) {
             return response.json();
         })
@@ -14,6 +15,7 @@ function fetchProducts() {
         });
 }
 
+//Funktion som hämtar en produkt efter ID
 function fetchProduct(productId) {
     fetch(url2 + productId)
     .then(response => response.json())
@@ -35,8 +37,7 @@ function fetchProduct(productId) {
     });
 }
 
-
-
+//Funktion som tar hämtade produkter och skapar upp sidan
 function showProducts(data) {
     const allProducts = document.getElementById("displayProducts");
     for(let i = 0; i < data.length; i++) {
@@ -55,6 +56,7 @@ function showProducts(data) {
     }
 }
 
+//Funktion som sparar produkt ID och skickar kunden vidare till beställningssidan
 function addToCartClick(pId) {
     sessionStorage.setItem('buyId', pId);
     window.location.href = "order-form.html";
