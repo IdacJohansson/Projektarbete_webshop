@@ -161,6 +161,26 @@ article {
   border-radius: 10px;
 }
 
+.product-price2{
+  border-top: 2px solid black;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#showOrder{
+  border: 2px solid black;
+  width: 300px;
+  height: fit-content;
+  margin-left: 20px;
+  text-align: center;
+  
+}
+
+.row-cols-1{
+  width: 300px;
+  height: 500px;
+}
+
 .product-title{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 5px;
@@ -206,11 +226,6 @@ article {
   width: 250px;
   height: 250px;
   transition: transform .3s;
-}
-
-.product-image-inside{
-  width: 300px;
-  height: 300px;
 }
 
 .product-image:hover{
