@@ -1,6 +1,6 @@
 html, body{
-  background-color:#ffffff; 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #F4F3EE; 
+  font-family:Verdana; 
   color: #000000;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@ article {
 }
 
 .header{
-  background-color: #6c4a85;
+  background-color:#463F3A;
   padding: 40px;
   margin: 0;
   text-align: center;
@@ -22,18 +22,20 @@ article {
 }
 
 .footer {
-  background-color: #6c4a85;
+  background-color: #463F3A; 
   padding: 10px;
   text-align: center;
   color: #ffffff;
 } 
 
 
-/*Meny*/  
+
+
+/*Navigeringsmeny*/  
 
 .menue{
   width: 100%;
-  background-color:rgb(192, 180, 210);
+  background-color:#BCB8B1; 
   overflow: auto;
 }
 
@@ -47,13 +49,11 @@ article {
 }
 
 .menue a:hover {
-  background-color: #000;
+  background-color: #000000;
 }
-  
-  /* Current/active navbar link */
 
 .active {
-  background-color: #4a2c5f;
+  background-color: #8A817C; 
 }
 
 .menue a.split{
@@ -61,7 +61,7 @@ article {
 }
 
 
-/*Order-form*/
+/*Order-formulär*/
 
   .container{
     display: block;
@@ -95,10 +95,12 @@ article {
     background-color: rgb(239, 237, 237);
   }
 
-  /*Order-confirmation*/
+
+
+  /*Order-bekräftelse*/
 
   .modul{
-    background-color:#ffffff; 
+    background-color:rgb(239, 237, 237);
     color: #000;
     width: 800px;
     border: 3px solid rgb(0, 0, 0);
@@ -108,7 +110,7 @@ article {
   }
 
   .color-section{
-    background-color: gainsboro;
+    background-color: #d4d3ce;
     padding: 50px;
     margin: auto;
     text-align: center;
@@ -119,6 +121,11 @@ article {
     margin: auto;
     text-align: center;
   }
+
+  .column-customerdetails{
+    text-align: center;
+  }
+
   .total-price{
     text-align: left;
   }
@@ -132,14 +139,24 @@ article {
     text-align: center;
   }
 
+  .imgForm{
+    max-width: 30%;
+    margin-left: 35%;
+    margin-right: 50%;
+
+  }
+
+
+
+
 /*Produktsida*/
 
 .product-head{
-  background-color: #a6c48a;
+  background-color: #F4F3EE; 
 }
 
 .product-header{
-  background-color: #a6c48a;
+  background-color: #F4F3EE; 
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 20px;
@@ -148,11 +165,11 @@ article {
 }
 
 .product-body{
-  background-color:#f6e7cb;
+  background-color:#F4F3EE;
 }
 
 .add-to-cart-button{
-  background-color:#f6e7cb;
+  background-color:#E0AFA0; 
   border-radius: 5px;
 }
 
@@ -191,7 +208,7 @@ article {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #f6e7cb;
   border-radius: 5px;
-  border: 2px solid #a6c48a;
+  border: 2px solid #BCB8B1; 
 }
 
 #getProducts{
@@ -201,7 +218,7 @@ article {
 #colPro{
   background-color: white;
   text-align: center;
-  border: 3px solid #a6c48a;
+  border: 3px solid #BCB8B1; 
   width: 300px;
   height: auto;
   border-radius: 15px;
@@ -211,7 +228,7 @@ article {
 }
 
 .container-fluid{
-  background-color: #f6e7cb;
+  background-color: #F4F3EE;
 }
 
 .products-footer{
@@ -234,6 +251,64 @@ article {
   border-radius: 15px;
 }
 
+
+
+/*offer-gallery produktsida*/
+
+
+*{box-sizing: border-box;}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
 
 

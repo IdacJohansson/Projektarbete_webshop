@@ -44,16 +44,8 @@ function getdata(){
 
 }
 
-
-
-
-
-
-
-
-
-
-
+function printFormData(){
+}
 
 
 
@@ -70,13 +62,16 @@ function enableSubmit(){
     }
     }
     btn.disabled = !isValid;
-    } 
+    };  
 
 
 function orderButtonClick(){
     enableSubmit(); 
     getdata(); 
-}
+    printFormData(); 
+}; 
+
+
 
 
 

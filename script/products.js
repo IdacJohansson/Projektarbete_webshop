@@ -52,7 +52,12 @@ function showProducts(data) {
                 '<button onclick="addToCartClick('+ data[i].id + ')", class="add-to-cart-button",  data-id="'+(data[i].id)+'">Buy</button>' +
             '</div>'   
         allProducts.appendChild(element);
-        
+
+        const addToCartButton = element.querySelector(".addToCartButton");
+        addToCartButton.addEventListener("click", function()) {
+            const id = this.getAttribute("data-id");
+            window.location.href = "order-form.html" + id;
+        });
     }
 }
 
