@@ -22,18 +22,16 @@
         <a href="order-form.html" class="split"><i class="fa fa-fw fa-shopping-cart"></i>Order</a>
     </nav>
     
-    <p>Mer info om produkten + beställningsformulär</p>
-    
     <!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
-    <div id="displayProduct" class="">
+    <div id="displayProduct">
         <script>
-            const buyId = sessionStorage.getItem("buyId");
+            const buyId = localStorage.getItem("buyId");
             fetchProduct(buyId)
         </script>
     </div>
 
 
-    <div class="container">
+    <div id="order-form-container" class="container">
         <div class="box">
         <div class="col">
             <h1>Order-form</h1>

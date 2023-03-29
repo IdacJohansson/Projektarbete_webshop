@@ -63,91 +63,99 @@ article {
 
 /*Order-formulär*/
 
-  .container{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.container{
+  width: auto;
+  padding-top: 50px;
+}
+
+#order-form-container{
+  display: block;
+  align-items: center;
+}
   
-  .box{
-    background-color: #6c4a85;
-    color: #000;
-    width: 800px;
-    border: 3px solid rgb(0, 0, 0);
-    padding: 50px;
-    margin: auto;
-    
-  }
-  .form-floating{
-    margin: 7px; 
-  }
-  .order-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-  }
-  input:valid {
-    background-color:#c6e8c8; 
-  }
+.box{
+  background-color: #6c4a85;
+  color: #000;
+  width: 600px;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 50px;
+}
 
-  input:invalid {
-    background-color: rgb(239, 237, 237);
-  }
+.form-floating{
+  margin: 7px; 
+}
 
+.order-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
 
+input:valid {
+  background-color:#c6e8c8; 
+}
 
-  /*Order-bekräftelse*/
-
-  .modul{
-    background-color:rgb(239, 237, 237);
-    color: #000;
-    width: 800px;
-    border: 3px solid rgb(0, 0, 0);
-    padding: 50px;
-    margin: auto;
-
-  }
-
-  .color-section{
-    background-color: #d4d3ce;
-    padding: 50px;
-    margin: auto;
-    text-align: center;
-  }
-
-  .order-details{
-    padding: 50px;
-    margin: auto;
-    text-align: center;
-  }
-
-  .column-customerdetails{
-    text-align: center;
-  }
-
-  .total-price{
-    text-align: left;
-  }
-  .Subtotal-price{
-    text-align: left;
-  }
-  .Shipping-price{
-    text-align: left;
-  }
-  .column-customerdetails{
-    text-align: center;
-  }
-
-  .imgForm{
-    max-width: 30%;
-    margin-left: 35%;
-    margin-right: 50%;
-
-  }
+input:invalid {
+  background-color: rgb(239, 237, 237);
+}
 
 
 
+/*Order-bekräftelse*/
+
+.modul{
+  background-color:rgb(239, 237, 237);
+  color: #000;
+  width: 800px;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 50px;
+  margin: auto;
+}
+
+.color-section{
+  background-color: #d4d3ce;
+  padding: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.order-details{
+  padding: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.column-customerdetails{
+  text-align: center;
+}
+
+.total-price{
+  text-align: left;
+}
+
+.Subtotal-price{
+  text-align: left;
+}
+
+.Shipping-price{
+  text-align: left;
+}
+
+.column-customerdetails{
+  text-align: center;
+}
+
+.imgForm{
+  max-width: 30%;
+  margin-left: 35%;
+  margin-right: 50%;
+}
+
+#thisImage{
+  width: 200px;
+  height: 200px;
+}
 
 /*Produktsida*/
 
@@ -185,17 +193,9 @@ article {
 }
 
 #showOrder{
-  border: 2px solid black;
-  width: 300px;
   height: fit-content;
-  margin-left: 20px;
   text-align: center;
-  
-}
-
-.row-cols-1{
-  width: 300px;
-  height: 500px;
+  width: 600px;
 }
 
 .product-title{
@@ -204,11 +204,14 @@ article {
   height: 78px;
 }
 
-.product-title-inside{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f6e7cb;
-  border-radius: 5px;
-  border: 2px solid #BCB8B1; 
+.product-title2{
+  font-size: larger;
+  border-bottom: 2px dotted black;
+}
+
+.product-image2{
+  width: 300px;
+  height: 300px;
 }
 
 #getProducts{
@@ -247,7 +250,7 @@ article {
 
 .product-image:hover{
   transform: scale(1.5);
-  border: 3px solid #a6c48a;
+  border: 3px solid #BCB8B1;
   border-radius: 15px;
 }
 

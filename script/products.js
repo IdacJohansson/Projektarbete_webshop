@@ -23,9 +23,9 @@ function fetchProduct(productId) {
         const productContainer = document.getElementById("displayProduct");
         const product = data;
         const productHtml = `
-        <div class="col" id="showOrder">
-            <div class="product-title">${product.title}<div>
-            <img width=300px, height=300px, src="${product.image}" alt="${product.name}">
+        <div class="container" id="showOrder">
+            <div class="product-title2">${product.title}</div>
+            <img class="product-image2" src="${product.image}" alt="${product.name}">
             <p>${product.description}</p>
             <p class="product-price2">$${product.price}</p>
         </div>
@@ -35,6 +35,18 @@ function fetchProduct(productId) {
     })
     .catch(error => {
     });
+}
+
+function getIt(buyId) {
+    fetch(url2 + buyId)
+    .then(response => response.json())
+    .then(data => {
+        const thatProduct = data;
+        console.log(thatProduct);
+        document.querySelector("#thisPrice").textContent = "$" + thatProduct.price;
+        document.querySelector("#thisDescription").textContent = thatProduct.description;
+        document.querySelector("#thisImage").src = thatProduct.image;
+    })
 }
 
 //Funktion som tar hämtade produkter och skapar upp sidan
@@ -48,7 +60,7 @@ function showProducts(data) {
                 '<div class="product-title" title=" '+ data[i].description +' ">' + data[i].title + '</div>' +
                 '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
                 '<p class="product-price">' + "$" + data[i].price + '</p>' +
-                '<div id="data[i].id">' + data[i].id + '</div>' +
+                
                 '<button onclick="addToCartClick('+ data[i].id + ')", class="add-to-cart-button",  data-id="'+(data[i].id)+'">Buy</button>' +
             '</div>'   
         allProducts.appendChild(element);
@@ -56,7 +68,7 @@ function showProducts(data) {
 }
 
 //Funktion som sparar produkt ID och skickar kunden vidare till beställningssidan
-function addToCartClick(pId) {
-    sessionStorage.setItem('buyId', pId);
+function addToCartClick(productId) {
+    localStorage.setItem('buyId', productId);
     window.location.href = "order-form.html";
 }

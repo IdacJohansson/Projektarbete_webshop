@@ -13,6 +13,12 @@
 </head>
 <h1 class="header"><img src="images/Logo.png" alt=""></h1>
 <body>
+    <script src="script/products.js"></script>
+    <script>
+        const buyId = localStorage.getItem("buyId");
+        getIt(buyId);
+    </script>
+    
     <article>
     <nav class="menue">
         <a class="active" href="shop.html">Shop</a>
@@ -34,12 +40,12 @@
                 <br>
                 <div class="row">
                 <div class="col">
-                        <p>PRODUKTBILD</p>
+                            <img id="thisImage" src="">
                         
                     </div>
                     <div class="col">
                         <p>PRODUKTBESKRIVNING</p>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, autem</p>
+                        <p id="thisDescription"></p>
                     </div>
                 </div>
             </div>
@@ -47,10 +53,11 @@
 
             <section class="order-details">
                 <h4>Order total</h4>
-                <p class="Subtotal-price">Subtotal price</p>
-                <p class="Shipping-price">Shipping price</p>
+                <p class="Subtotal-price" id="thisPrice">Subtotal price</p>
+                <p class="Shipping-price">$ 23.90 - Shipping cost</p>
                 <hr class="line">
                 <p class="total-price">Total price</p>
+                <p></p>
             </section>
 
             <div class="column-customerdetails">
