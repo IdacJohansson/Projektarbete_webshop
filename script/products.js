@@ -27,7 +27,7 @@ function fetchProduct(productId) {
             <div class="product-title2">${product.title}</div>
             <img class="product-image2" src="${product.image}" alt="${product.name}">
             <p>${product.description}</p>
-            <p class="product-price2">$${product.price}</p>
+            <p class="product-price2">$ ${product.price}</p>
         </div>
         `;
         productContainer.innerHTML = productHtml;
@@ -37,15 +37,22 @@ function fetchProduct(productId) {
     });
 }
 
+//Ny funktion som hämtar info om enskild produkt
 function getIt(buyId) {
     fetch(url2 + buyId)
     .then(response => response.json())
     .then(data => {
         const thatProduct = data;
-        console.log(thatProduct);
-        document.querySelector("#thisPrice").textContent = "$" + thatProduct.price;
+        document.querySelector("#thisPrice").textContent = "$ " + parseFloat(thatProduct.price);
         document.querySelector("#thisDescription").textContent = thatProduct.description;
         document.querySelector("#thisImage").src = thatProduct.image;
+        const productContainer = document.getElementById("displayTotal")
+        const productHTML = `
+        <div class="container" id="showPriceTotal">
+            <div class="priceTotal">parseFloat(${product.price})+23.90</div>
+        </div>
+        `;
+        productContainer.innerHTML = productHTML;
     })
 }
 
@@ -59,8 +66,7 @@ function showProducts(data) {
             '<div class="col" id="colPro">' + 
                 '<div class="product-title" title=" '+ data[i].description +' ">' + data[i].title + '</div>' +
                 '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
-                '<p class="product-price">' + "$" + data[i].price + '</p>' +
-                
+                '<p class="product-price">' + "$ " + data[i].price + '</p>' +
                 '<button onclick="addToCartClick('+ data[i].id + ')", class="add-to-cart-button",  data-id="'+(data[i].id)+'">Buy</button>' +
             '</div>'   
         allProducts.appendChild(element);

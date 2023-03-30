@@ -14,7 +14,8 @@
 </head>
 <h1 class="header"><img src="images/Logo.png" alt=""></h1>
 <body>
-    <script src="script/products.js"></script>
+    <script>const buyId = localStorage.getItem("buyId");</script>
+    <script src="script/products.js" onload="fetchProduct(buyId)"></script>
     <article>
     <nav class="menue">
         <a class="active" href="products.html">Shop</a>
@@ -23,12 +24,7 @@
     </nav>
     
     <!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
-    <div id="displayProduct">
-        <script>
-            const buyId = localStorage.getItem("buyId");
-            fetchProduct(buyId)
-        </script>
-    </div>
+    <div id="displayProduct"></div>
 
 
     <div id="order-form-container" class="container">
