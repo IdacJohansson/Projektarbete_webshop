@@ -88,17 +88,20 @@ article {
   }
   
   input:valid {
-    background-color:#c6e8c8; 
+    background-color: #ffffff;  
   }
 
   input:invalid {
-    background-color: rgb(239, 237, 237);
+    background-color: #E0AFA0; 
   }
   .form-label{
     text-align: center;
   }
   .headerOne{
     color: #ffffff;
+  }
+  .error{
+    color: #E0AFA0;
   }
   
 
