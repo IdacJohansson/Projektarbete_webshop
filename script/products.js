@@ -1,9 +1,9 @@
-const url = "https://mocki.io/v1/a99e6cf4-1e5a-4b0e-bc57-6c651f0f09cd";
-const url2 = "https://fakestoreapi.com/products/";
+//const url = "https://mocki.io/v1/a99e6cf4-1e5a-4b0e-bc57-6c651f0f09cd";
+const url = "https://fakestoreapi.com/products/";
 
 //Funktion som hämtar produkter
 function fetchProducts() {
-    fetch(url2)
+    fetch(url)
         .then(function(response) {
             return response.json();
         })
@@ -17,7 +17,7 @@ function fetchProducts() {
 
 //Funktion som hämtar en produkt efter ID
 function fetchProduct(productId) {
-    fetch(url2 + productId)
+    fetch(url + productId)
     .then(response => response.json())
     .then(data => {
         const productContainer = document.getElementById("displayProduct");
@@ -39,7 +39,7 @@ function fetchProduct(productId) {
 
 //Ny funktion som hämtar info om enskild produkt
 function getIt(buyId) {
-    fetch(url2 + buyId)
+    fetch(url + buyId)
     .then(response => response.json())
     .then(data => {
         const thatProduct = data;
