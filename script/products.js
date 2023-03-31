@@ -43,16 +43,13 @@ function getIt(buyId) {
     .then(response => response.json())
     .then(data => {
         const thatProduct = data;
-        document.querySelector("#thisPrice").textContent = "$ " + parseFloat(thatProduct.price);
+        document.querySelector("#thisPrice").textContent = "$ " + thatProduct.price + " - Subtotal";
         document.querySelector("#thisDescription").textContent = thatProduct.description;
         document.querySelector("#thisImage").src = thatProduct.image;
-        const productContainer = document.getElementById("displayTotal")
-        const productHTML = `
-        <div class="container" id="showPriceTotal">
-            <div class="priceTotal">parseFloat(${product.price})+23.90</div>
-        </div>
-        `;
-        productContainer.innerHTML = productHTML;
+        const priceTotal = parseFloat(data.price) + 23.90;
+        const thisPriceTotal = "$ " + priceTotal + " - Total";
+        outputPrice = document.getElementById("priceTotal");
+        outputPrice.innerHTML = thisPriceTotal;
     })
 }
 
