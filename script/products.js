@@ -61,8 +61,8 @@ function showProducts(data) {
         element.classList.add("col-md-3", "col-sm-6");
         element.innerHTML = 
             '<div class="col" id="colPro">' + 
-                '<div class="product-title" title=" '+ data[i].description +' ">' + data[i].title + '</div>' +
-                '<img src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                '<div class="product-title">' + data[i].title + '</div>' +
+                '<img title = " '+ data[i].description +' "  src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
                 '<p class="product-price">' + "$ " + data[i].price + '</p>' +
                 '<button onclick="addToCartClick('+ data[i].id + ')", class="add-to-cart-button",  data-id="'+(data[i].id)+'">Buy</button>' +
             '</div>'   
