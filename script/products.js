@@ -62,7 +62,7 @@ function showProducts(data) {
         element.innerHTML = 
             '<div class="col" id="colPro">' + 
                 '<div class="product-title">' + data[i].title + '</div>' +
-                '<img title = " '+ data[i].description +' "  src=' + data[i].image + ' class="product-image" alt="BILD SAKNAS">' +
+                '<img title = " '+ data[i].description +' "  src=' + data[i].image + ' class="product-image" alt="' + data[i].title + '">' +
                 '<p class="product-price">' + "$ " + data[i].price + '</p>' +
                 '<button onclick="addToCartClick('+ data[i].id + ')", class="add-to-cart-button",  data-id="'+(data[i].id)+'">Buy</button>' +
             '</div>'   

@@ -72,10 +72,11 @@ article {
   display: block;
   align-items: center;
 }
-  .container{
-    display: block;
-    text-align: center;
-  }
+
+.container{
+  display: block;
+  text-align: center;
+}
   
 .box{
   background-color: #BCB8B1; 
@@ -101,9 +102,9 @@ input:valid {
   background-color: #ffffff;  
 }
 
-  input:invalid {
-    background-color: rgb(239, 237, 237);
-  }
+input:invalid {
+  background-color: rgb(239, 237, 237);
+}
 
 
 
@@ -318,6 +319,3 @@ img {vertical-align: middle;}
   from {opacity: .4} 
   to {opacity: 1}
 }
-
-
-
