@@ -1,7 +1,8 @@
-const url = "https://fakestoreapi.com/products/";
+
 
 //Funktion som hämtar produkter
 function fetchProducts() {
+    const url = "https://fakestoreapi.com/products/";
     fetch(url)
         .then(function(response) {
             return response.json();
@@ -16,7 +17,8 @@ function fetchProducts() {
 
 //Funktion som hämtar en produkt efter ID
 function fetchProduct(productId) {
-    fetch(url + productId)
+    const urll = "https://fakestoreapi.com/products/";
+    fetch(urll + productId)
     .then(response => response.json())
     .then(data => {
         const productContainer = document.getElementById("displayProduct");
@@ -38,7 +40,8 @@ function fetchProduct(productId) {
 
 //Ny funktion som hämtar info om enskild produkt
 function getIt(buyId) {
-    fetch(url + buyId)
+    const urrl = "https://fakestoreapi.com/products/";
+    fetch(urrl + buyId)
     .then(response => response.json())
     .then(data => {
         const thatProduct = data;
@@ -78,6 +81,7 @@ function addToCartClick(productId) {
 
 function formValidationCheck(){
 
+
     const orderForm = document.getElementById('orderForm'); 
     orderForm.addEventListener('submit', function(e){
         e.preventDefault(); 
@@ -90,7 +94,7 @@ function formValidationCheck(){
         const zip = document.getElementById("zip").value;
         const phone = document.getElementById("phone").value;
         const email = document.getElementById("email").value; 
-        
+    
 
         const zipPattern = /^\d{3}\s\d{2}$/;
         const emailPattern = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
@@ -102,10 +106,8 @@ function formValidationCheck(){
             document.getElementById('fn').innerText = "First name must be 2-50 characters\r\n";
             return !isValid; 
         } else{
+            document.getElementById('fn').innerText = ""; 
             localStorage.setItem("firstname", firstname);
-            document.getElementById('fn').innerText = "";
-            const f = localStorage.getItem("firstname"); 
-            document.getElementById("firstname").textContent = f;
         }
         if (lastname.length < 2 || lastname.length > 50) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters.\r\n"; 
@@ -150,39 +152,27 @@ function formValidationCheck(){
             localStorage.setItem("email", email);  
             document.getElementById('em').innerText = ""; 
         }
-
+         
         window.location.href = "order-confirmation.html"; 
         return isValid; 
+        
  
     }); 
-
+     
+        
 }
 
-const f = localStorage.getItem("firstname"); 
-document.getElementById("firstname").textContent = f;
+function setName(){ // test-funktion för att kunna printa ut billing&shipping - funkar ej 
 
-const l = localStorage.getItem("lastname"); 
-document.getElementById("lastname").textContent = l;
-
-const a = localStorage.getItem("address"); 
-document.getElementById("address").textContent = a;
-
-const c = localStorage.getItem("city"); 
-document.getElementById("city").textContent = c;
-
-const z = localStorage.getItem("zip"); 
-document.getElementById("zip").textContent = z;
-
-const p = localStorage.getItem("phone"); 
-document.getElementById("phone").textContent = p;
-
-const e = localStorage.getItem("email"); 
-document.getElementById("email").textContent = e;
-
-window.location.href = "order-confirmation.html"
+    const setFirstName = document.getElementById("firstname");
+    document.getElementById("first-name").innerHTML = setFirstName; 
+}
 
 
 for (let i = 0; i < localStorage.length; i++) {
     console.log("Key: " + localStorage.key(i));
     console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
 }
+
+
+ 
