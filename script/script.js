@@ -1,5 +1,5 @@
 // LocalStorage
-    const orderForm = document.getElementById('orderForm'); 
+    /*const orderForm = document.getElementById('orderForm'); 
     orderForm.addEventListener('submit', function(e){
         e.preventDefault(); 
 
@@ -71,7 +71,7 @@
     for (let i = 0; i < localStorage.length; i++) {
         console.log("Key: " + localStorage.key(i));
         console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
-    }
+    }*/
 
 
 /*function storeAndGetData(){
@@ -116,14 +116,80 @@
 
     
 
-function orderButtonClick(){
+/*function orderButtonClick(){
     getdata(); 
      
-}; 
+}; */
 
 
 
+const orderForm = document.getElementById("orderForm");
+orderForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const firstname = document.getElementById("firstname").value;
+  const lastname = document.getElementById("lastname").value;
+  const address = document.getElementById("address").value;
+  const zip = document.getElementById("zip").value;
+  const city = document.getElementById("city").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
 
+  const nameRegex = /^[A-Za-z]+$/ + 50> length < 5;
+  const phoneRegex = /^\d{10}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  if (!nameRegex.test(firstname)) {
+    document.getElementById("fn").classList.add("is-invalid");
+    isValid = false;
+  } else {
+    document.getElementById("fn").classList.remove("is-invalid");
+  }
 
+  if (!nameRegex.test(lastname)) {
+    document.getElementById("ln").innerHTML = "Please enter a valid last name";
+    isValid = false;
+  } else {
+    document.getElementById("ln").innerHTML = "";
+  }
 
+  if (!address.trim()) {
+    document.getElementById("ad").innerHTML = "Please enter an address";
+    isValid = false;
+  } else {
+    document.getElementById("ad").innerHTML = "";
+  }
+
+  if (!zip.trim()) {
+    document.getElementById("zip").classList.add("is-invalid");
+    isValid = false;
+  } else {
+    document.getElementById("zip").classList.remove("is-invalid");
+  }
+
+  if (!city.trim()) {
+    document.getElementById("cty").innerHTML = "Please enter a city";
+    isValid = false;
+  } else {
+    document.getElementById("cty").innerHTML = "";
+  }
+
+  if (!phoneRegex.test(phone)) {
+    document.getElementById("phn").innerHTML = "Please enter a valid phone number";
+    isValid = false;
+  } else {
+    document.getElementById("phn").innerHTML = "";
+  }
+
+  if (!emailRegex.test(email)) {
+    document.getElementById("eml").innerHTML = "Please enter a valid email";
+    isValid = false;
+  } else {
+    document.getElementById("eml").innerHTML = "";
+  }
+
+  if (isValid) {
+    orderForm.submit();
+  }
+  
+});
