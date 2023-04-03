@@ -76,7 +76,6 @@ function addToCartClick(productId) {
 }
     
 
-
 function formValidationCheck(){
 
     const orderForm = document.getElementById('orderForm'); 
@@ -105,6 +104,8 @@ function formValidationCheck(){
         } else{
             localStorage.setItem("firstname", firstname);
             document.getElementById('fn').innerText = "";
+            const f = localStorage.getItem("firstname"); 
+            document.getElementById("firstname").textContent = f;
         }
         if (lastname.length < 2 || lastname.length > 50) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters.\r\n"; 
@@ -152,11 +153,7 @@ function formValidationCheck(){
 
         window.location.href = "order-confirmation.html"; 
         return isValid; 
-        
-        
-        
-        
-        
+ 
     }); 
 
 }
