@@ -83,13 +83,6 @@ article {
     height: 100px;
   }
   
-  input:valid {
-    background-color: #ffffff;  
-  }
-
-  input:invalid {
-    background-color: #E0AFA0; 
-  }
   .form-label{
     text-align: center;
   }
