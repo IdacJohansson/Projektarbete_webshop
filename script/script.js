@@ -12,7 +12,7 @@
         const phone = document.getElementById("phone").value;
         const email = document.getElementById("email").value; 
         
-        localStorage.setItem("city", city); 
+        
         localStorage.setItem("zip", zip);
         localStorage.setItem("phone", phone); 
         localStorage.setItem("email", email); 
@@ -23,18 +23,34 @@
         if (firstname.length < 2 || firstname.length > 50) {
             document.getElementById('fn').innerText = "First name must be 2-50 characters\r\n";
         } else {
-            localStorage.setItem("first-name", firstname); 
+            localStorage.setItem("firstname", firstname); 
+            document.getElementById('fn').innerText = "";
         }
         if (lastname.length < 2 || lastname.length > 50) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters\r\n";
         } else {
             localStorage.setItem("lastname", lastname);
+            document.getElementById('ln').innerText = "";
         }
         if (address.length < 4 || address.length > 50) {
             document.getElementById('ad').innerText = "Address must be 4-50 characters\r\n";
         } else {
             localStorage.setItem("address", address); 
+            document.getElementById('ad').innerText = "";
         }
+        if (zip == "" || !zipPattern.test(zip)){
+            document.getElementById('zi').innerText = "Please enter a valid zip code";
+        } else{
+            localStorage.setItem("zip", zip); 
+            document.getElementById('zi').innerText = ""; 
+        }
+        if (city.length < 2 || city.length > 50 ){
+            document.getElementById('ci').innerText = "Last name must be 2-50 characters\r\n";
+        } else{
+            localStorage.setItem("city", city); 
+            document.getElementById('ci').innerText = ""; 
+        }
+        
 
         
     }); 
@@ -42,10 +58,10 @@
     function printShipping(){
 
     const f = localStorage.getItem("firstname"); 
-    document.getElementById("firstname").textContent = f;
+    document.getElementById("first-name").textContent = f;
     
     const l = localStorage.getItem("lastname"); 
-    document.getElementById("lastname").textContent = l;
+    document.getElementById("last-name").textContent = l;
 
     const a = localStorage.getItem("address"); 
     document.getElementById("address").textContent = a;
