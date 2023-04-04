@@ -37,7 +37,7 @@ function fetchProduct(productId) {
 }
 
 //Ny funktion som hämtar info om enskild produkt
-function getIt(buyId) {
+function getProduct(buyId) {
     fetch(url + buyId)
     .then(response => response.json())
     .then(data => {
@@ -104,8 +104,6 @@ function formValidationCheck(){
         } else{
             localStorage.setItem("firstname", firstname);
             document.getElementById('fn').innerText = "";
-            const f = localStorage.getItem("firstname"); 
-            document.getElementById("firstname").textContent = f;
         }
         if (lastname.length < 2 || lastname.length > 50) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters.\r\n"; 
@@ -182,7 +180,7 @@ document.getElementById("email").textContent = e;
 window.location.href = "order-confirmation.html"
 
 
-for (let i = 0; i < localStorage.length; i++) {
+/*for (let i = 0; i < localStorage.length; i++) {
     console.log("Key: " + localStorage.key(i));
     console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
-}
+}*/
