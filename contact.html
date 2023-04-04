@@ -18,18 +18,17 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <div>
-      <section class="contactText">
-        <h2>Contact us</h2>
-        <a href="">Mail</a> | <a href="">Phone</a>
-
-      </section>
-      
+    <div class="contact-us" id="contact-body">
+      <form id="contact-form">
+        <label id="contact-info" for="customerName">Name</label>
+        <input id="customerName" name="customerName" type="text" />
+        <label id="contact-info" for="customerEmail">Email</label>
+        <input id="customerEmail" name="customerEmail" type="email" />
+        <label id="contact-info" for="customerNote">What can we help you with</label>
+        <textarea id="customerNote" name="customerNote" rows="4"></textarea>
+        <button id="customerOrder">Send</button>
+      </form>
     </div>
-    
-    
-
-
 
     <footer class="footer">
         <div class="container pt-4">
