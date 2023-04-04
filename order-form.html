@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
-<h1 class="header"><img src="images/Logo.png" alt=""></h1>
 <body>
+    <div class="header"><img src="images/Logo.png" alt=""></div>
     <script>const buyId = localStorage.getItem("buyId");</script>
     <script src="script/script.js" onload="fetchProduct(buyId)"></script>
     <article>
@@ -21,83 +21,78 @@
             <a href="contact.html">Contact</a>
         </nav>
 
-<div id="order-form-container" class="container">
-    <div class="box">
-        <div class="col">
-            <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1><br>
-            <form id="orderForm">
-                <div class="row">
-                    <div class="col form-floating">
-                        <input type="text" id="firstname" class="form-control" placeholder="first-name">
-                        <label for="first-name" class="form-label">&nbsp;First name</label>
-                            <div id="fn" class="error"></div>
+        <div id="order-form-container" class="container">
+            <div class="box">
+                <div class="col">
+                    <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1><br>
+                    <form id="orderForm">
+                        <div class="row">
+                            <div class="col form-floating">
+                                <input type="text" id="firstname" class="form-control" placeholder="first-name">
+                                <label class="form-label">&nbsp;First name</label>
+                                <div id="fn" class="error"></div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="text" id="lastname" class="form-control" placeholder="last-name">
+                                <label class="form-label">&nbsp;Last name</label>
+                                <div id="ln" class="error"></div>
+                            </div>
                         </div>
-                        <div class="col form-floating">
-                            <input type="text" id="lastname" class="form-control" placeholder="last-name">
-                            <label for="last-name" class="form-label">&nbsp;Last name</label>
-                            <div id="ln" class="error"></div>
+
+                        <div class="form-floating">
+                            <input type="text" id="address" class="form-control" placeholder="address" title="The address must contain 4-50 letters">
+                            <label class="form-label">Address</label>
+                            <div id="ad" class="error"></div>
                         </div>
-    
-                    </div>
-                <div class="form-floating">
-                    <input type="text" id="address" class="form-control" placeholder="address" title="The address must contain 4-50 letters">
-                    <label for="Address" class="form-label">Address</label>
-                    <div id="ad" class="error"></div>
-                </div>
             
-                <div class="row">
-                    <div class="col form-floating">
-                        <input type="text" id="zip" class="form-control" placeholder="zip" title="Zip code format: xxx@xxx.xxx">
-                        <label for="zip" class="form-label">&nbsp;Zip code</label>
-                        <div id="zi" class="error"></div>
-                </div>
-                    <div class="col form-floating">
-                            <input type="text" id="city" class="form-control" placeholder="city" title="The city must contain 2-50 letters">
-                            <label for="city" class="form-label">&nbsp;City</label>
-                            <div id="ci" class="error"></div>
+                        <div class="row">
+                            <div class="col form-floating">
+                                <input type="text" id="zip" class="form-control" placeholder="zip" title="Zip code format: xxx@xxx.xxx">
+                                <label class="form-label">&nbsp;Zip code</label>
+                                <div id="zi" class="error"></div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="text" id="city" class="form-control" placeholder="city" title="The city must contain 2-50 letters">
+                                <label class="form-label">&nbsp;City</label>
+                                <div id="ci" class="error"></div>
+                            </div>
                         </div>
-                    </div>
 
-                <div class="row">    
-                <div class="col form-floating"> 
-                    <input type="tel" id="phone" class="form-control" placeholder="Phone" title="Ex phone format: 070-4200000">
-                    <label for="Phone" class="form-label">&nbsp;Phone</label>
-                    <div id="ph" class="error"></div>
-                </div>
-                <div class="col form-floating">
-                    <input type="email" id="email" class="form-control" placeholder="Enter email here"  title="Email format: jsmith@example.com">
-                    <label for="email" class="form-label">&nbsp;Email</label>
-                    <div id="em" class="error"></div>
-                </div>
-                </div>
-                <br>
-                <div id="displayProduct"></div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck();" class="btn btn-outline-dark"></i>Place order</button></div>
-            </form>
+                        <div class="row">    
+                            <div class="col form-floating"> 
+                                <input type="tel" id="phone" class="form-control" placeholder="Phone" title="Ex phone format: 070-4200000">
+                                <label class="form-label">&nbsp;Phone</label>
+                                <div id="ph" class="error"></div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="email" id="email" class="form-control" placeholder="Enter email here"  title="Email format: jsmith@example.com">
+                                <label class="form-label">&nbsp;Email</label>
+                                <div id="em" class="error"></div>
+                            </div>
+                        </div>
+
+                        <div id="displayProduct"></div>
+                        <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck();" class="btn btn-outline-dark">Place order</button></div>            
+                    </form>                
+                </div>    
+            </div>
         </div>
-    </div>
-</div>
 
-<div> <br> </div>
-
-
-    <footer class="footer">
-        <div class="container pt-4">
-          <section class="mb-4" >
-            <a href="#" class="fa fa-facebook-square link-light" ></a>
-            <a href="#" class="fa fa-twitter-square link-light"></a>
-            <a href="#" class="fa fa-pinterest-square link-light"></a>
-            <a href="#" class="fa fa-instagram link-light"></a>
-            <a href="#" class="fa fa-linkedin-square link-light"></a>
-          </section>
-        </div>
-        <div class="text-center p-3">
-            Copyright &copy; 2023 – Clothes&stufff AB
-        </div>
-      </footer>
-
-    
-</article>  
-<script src="script/script.js"></script>
+        <footer class="footer">
+            <div class="container pt-4">
+                <div class="mb-4" >
+                    <a href="#" class="fa fa-facebook-square link-light" ></a>
+                    <a href="#" class="fa fa-twitter-square link-light"></a>
+                    <a href="#" class="fa fa-pinterest-square link-light"></a>
+                    <a href="#" class="fa fa-instagram link-light"></a>
+                    <a href="#" class="fa fa-linkedin-square link-light"></a>
+                </div>
+            </div>
+            <div class="text-center p-3">
+                Copyright &copy; 2023 – Clothes&Stuff AB
+            </div>
+        </footer>
+        <script src="script/script.js"></script>
+    </article>    
 </body>
 </html>
