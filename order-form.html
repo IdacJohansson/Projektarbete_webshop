@@ -9,36 +9,36 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    
-    
+
 </head>
 <h1 class="header"><img src="images/Logo.png" alt=""></h1>
 <body>
+    <script>const buyId = localStorage.getItem("buyId");</script>
+    <script src="script/script.js" onload="fetchProduct(buyId)"></script>
     <article>
     <nav class="menue">
-        <a href="products.html">Shop</a>
+        <a href="index.html">Shop</a>
         <a href="contact.html">Contact</a>
-        <a href="order-form.html" class="split"><i class="fa fa-check"></i>Order</a>
     </nav>
-    <br>
-    <br>
+    
+<!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
+<div id="displayProduct"></div>
 
-    <div class="container">
-        <div class="box">
+<div id="order-form-container" class="container">
+    <div class="box">
         <div class="col">
             <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1><br>
             <form action="" id="orderForm" onsubmit="">
                 <div class="row">
                     <div class="col form-floating">
-                     
-                            <input type="text" id="firstname" class="form-control" placeholder="first-name" title="The first name must contain 2-50 letters">
-                            <label for="first-name" class="form-label">&nbsp;First name</label>
+                        <input type="text" id="firstname" class="form-control" placeholder="first-name">
+                        <label for="first-name" class="form-label">&nbsp;First name</label>
                             <div id="fn" class="error"></div>
                         </div>
                         <div class="col form-floating">
-                                <input type="text" id="lastname" class="form-control" placeholder="last-name"  title="The last name must contain 2-50 letters">
-                                <label for="last-name" class="form-label">&nbsp;Last name</label>
-                                <div id="ln" class="error"></div>
+                            <input type="text" id="lastname" class="form-control" placeholder="last-name">
+                            <label for="last-name" class="form-label">&nbsp;Last name</label>
+                            <div id="ln" class="error"></div>
                         </div>
     
                     </div>
@@ -73,15 +73,13 @@
                     <div id="em" class="error"></div>
                 </div>
                 </div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck(); printShipping();" class="btn btn-outline-light"></i>Place order</button></div>
+                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck();" class="btn btn-outline-light"></i>Place order</button></div>
             </form>
-                
-            
         </div>
-      </div>
     </div>
-    <br>
-    <br>
+</div>
+<br>
+<br>
 
     <footer class="footer">
         <div class="container pt-4">
