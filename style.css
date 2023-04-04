@@ -295,6 +295,9 @@ article {
   to {opacity: 1}
 }
 
+.saleImg{
+  width: 100%;
+}
 
 /*  Contact page  */
 
@@ -334,6 +337,4 @@ article {
 }
 
 
-.saleImg{
-  width: 100%;
-}
+
