@@ -21,18 +21,19 @@
         <a href="contact.html">Contact</a>
     </nav>
     
-<!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
-<div id="displayProduct"></div>
+    <!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
+    <div id="displayProduct"></div>
 
-<div id="order-form-container" class="container">
-    <div class="box">
-        <div class="col">
-            <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1><br>
-            <form action="" id="orderForm" onsubmit="">
-                <div class="row">
-                    <div class="col form-floating">
-                        <input type="text" id="firstname" class="form-control" placeholder="first-name">
-                        <label for="first-name" class="form-label">&nbsp;First name</label>
+    <div id="order-form-container" class="container">
+        <div class="box">
+            <div class="col">
+                <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1>
+                <br>
+                <form action="" id="orderForm" onsubmit="">
+                    <div class="row">
+                        <div class="col form-floating">
+                            <input type="text" id="firstname" class="form-control" placeholder="first-name">
+                            <label for="first-name" class="form-label">&nbsp;First name</label>
                             <div id="fn" class="error"></div>
                         </div>
                         <div class="col form-floating">
@@ -40,46 +41,44 @@
                             <label for="last-name" class="form-label">&nbsp;Last name</label>
                             <div id="ln" class="error"></div>
                         </div>
-    
-                    </div>
-                <div class="form-floating">
-                    <input type="text" id="address" class="form-control" placeholder="address"  title="The address must contain 4-50 letters">
-                    <label for="Address" class="form-label">Address</label>
-                    <div id="ad" class="error"></div>
-                </div>
-            
-                <div class="row">
-                    <div class="col form-floating">
-                        <input type="text" id="zip" class="form-control" placeholder="zip" title="Zip code format: xxx@xxx.xxx">
-                        <label for="zip" class="form-label">&nbsp;Zip code</label>
-                        <div id="zi" class="error"></div>
-                </div>
-                    <div class="col form-floating">
-                            <input type="text" id="city" class="form-control" placeholder="city" title="The city must contain 2-50 letters">
-                            <label for="city" class="form-label">&nbsp;City</label>
-                            <div id="ci" class="error"></div>
+                        <div class="form-floating">
+                            <input type="text" id="address" class="form-control" placeholder="address"  title="The address must contain 4-50 letters">
+                            <label for="Address" class="form-label">Address</label>
+                            <div id="ad" class="error"></div>
                         </div>
-                    </div>
-
-                <div class="row">    
-                <div class="col form-floating"> 
-                    <input type="tel" id="phone" class="form-control" placeholder="Phone" title="Ex phone format: 070-4200000">
-                    <label for="Phone" class="form-label">&nbsp;Phone</label>
-                    <div id="ph" class="error"></div>
-                </div>
-                <div class="col form-floating">
-                    <input type="email" id="email" class="form-control" placeholder="Enter email here"  title="Email format: jsmith@example.com">
-                    <label for="email" class="form-label">&nbsp;Email</label>
-                    <div id="em" class="error"></div>
-                </div>
-                </div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck(); setName();" class="btn btn-outline-light"></i>Place order</button></div>
-            </form>
+                        <div class="row">
+                            <div class="col form-floating">
+                                <input type="text" id="zip" class="form-control" placeholder="zip" title="Zip code format: xxx@xxx.xxx">
+                                <label for="zip" class="form-label">&nbsp;Zip code</label>
+                                <div id="zi" class="error"></div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="text" id="city" class="form-control" placeholder="city" title="The city must contain 2-50 letters">
+                                <label for="city" class="form-label">&nbsp;City</label>
+                                <div id="ci" class="error"></div>
+                            </div>
+                        </div>
+                        <div class="row">    
+                            <div class="col form-floating"> 
+                                <input type="tel" id="phone" class="form-control" placeholder="Phone" title="Ex phone format: 070-4200000">
+                                <label for="Phone" class="form-label">&nbsp;Phone</label>
+                                <div id="ph" class="error"></div>
+                            </div>
+                            <div class="col form-floating">
+                                <input type="email" id="email" class="form-control" placeholder="Enter email here"  title="Email format: jsmith@example.com">
+                                <label for="email" class="form-label">&nbsp;Email</label>
+                                <div id="em" class="error"></div>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="order-button"><button type="submit" id="btn" value="btn" onclick="formValidationCheck()" class="btn btn-outline-light"></i>Place order</button></div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<br>
-<br>
+
+    <br>
+    <br>
 
     <footer class="footer">
         <div class="container pt-4">
@@ -94,10 +93,6 @@
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             Copyright &copy; 2023 – Clothes&stufff AB
         </div>
-      </footer>
-
-    
-</article>  
-<script src="script/script.js"></script>
+    </footer>
 </body>
 </html>

@@ -1,9 +1,8 @@
-
+//const url = "https://fakestoreapi.com/products/";
 
 //Funktion som hämtar produkter
 function fetchProducts() {
-    const url = "https://fakestoreapi.com/products/";
-    fetch(url)
+    fetch("https://fakestoreapi.com/products/")
         .then(function(response) {
             return response.json();
         })
@@ -17,8 +16,7 @@ function fetchProducts() {
 
 //Funktion som hämtar en produkt efter ID
 function fetchProduct(productId) {
-    const urll = "https://fakestoreapi.com/products/";
-    fetch(urll + productId)
+    fetch("https://fakestoreapi.com/products/" + productId)
     .then(response => response.json())
     .then(data => {
         const productContainer = document.getElementById("displayProduct");
@@ -40,7 +38,7 @@ function fetchProduct(productId) {
 
 //Ny funktion som hämtar info om enskild produkt
 function getProduct(buyId) {
-    fetch(url + buyId)
+    fetch("https://fakestoreapi.com/products/" + buyId)
     .then(response => response.json())
     .then(data => {
         const thatProduct = data;
@@ -79,13 +77,10 @@ function addToCartClick(productId) {
     
 
 function formValidationCheck(){
-
-
     const orderForm = document.getElementById('orderForm'); 
     orderForm.addEventListener('submit', function(e){
         e.preventDefault(); 
 
-        
         const firstname = document.getElementById("firstname").value;
         const lastname = document.getElementById("lastname").value;
         const address = document.getElementById("address").value;
@@ -102,12 +97,12 @@ function formValidationCheck(){
         const isValid = true; 
 
         if (firstname.length < 2 || firstname.length > 50) {
-            document.getElementById('fn').innerText = "First name must be 2-50 characters\r\n";
+            document.getElementById("firstname").innerText = "First name must be 2-50 characters\r\n";
             return !isValid; 
-        } else{
-            document.getElementById('fn').innerText = ""; 
+        } else {
+            document.getElementById("fn").innerText = "";
             localStorage.setItem("firstname", firstname);
-            document.getElementById('fn').innerText = "";
+            console.log(firstname);
         }
         if (lastname.length < 2 || lastname.length > 50) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters.\r\n"; 
@@ -162,16 +157,10 @@ function formValidationCheck(){
         
 }
 
-function setName(){ // test-funktion för att kunna printa ut billing&shipping - funkar ej 
+/*function setName(){ // test-funktion för att kunna printa ut billing&shipping - funkar ej 
 
     const setFirstName = document.getElementById("firstname");
     document.getElementById("first-name").innerHTML = setFirstName; 
-}
-
-
-/*for (let i = 0; i < localStorage.length; i++) {
-    console.log("Key: " + localStorage.key(i));
-    console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
 }*/
 
 
