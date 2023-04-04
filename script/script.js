@@ -26,7 +26,9 @@ function fetchProduct(productId) {
         const productHtml = `
         <div class="container" id="showOrder">
             <div class="product-title2">${product.title}</div>
+            <br>
             <img class="product-image2" src="${product.image}" alt="${product.name}">
+            <br>
             <p>${product.description}</p>
             <p class="product-price2">$ ${product.price}</p>
         </div>
@@ -99,59 +101,58 @@ function formValidationCheck(){
         const emailPattern = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
         const phonePattern = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
+        const emptyField = ""; 
+
         const isValid = true; 
 
-        if (firstname.length < 2 || firstname.length > 50) {
+        if (firstname.length < 2 || firstname.length > 50 || emptyField) {
             document.getElementById('fn').innerText = "First name must be 2-50 characters\r\n";
             return !isValid; 
         } else{
             document.getElementById('fn').innerText = ""; 
             localStorage.setItem("firstname", firstname);
         }
-        if (lastname.length < 2 || lastname.length > 50) {
+        if (lastname.length < 2 || lastname.length > 50 || emptyField) {
             document.getElementById('ln').innerText = "Last name must be 2-50 characters.\r\n"; 
             return !isValid;
         } else {
             localStorage.setItem("lastname", lastname);
             document.getElementById('ln').innerText = "";
         }
-        if (address.length < 4 || address.length > 50) {
+        if (address.length < 4 || address.length > 50 || emptyField) {
             document.getElementById('ad').innerText = "Address must be 4-50 characters.\r\n";
             return !isValid;
         } else {
             localStorage.setItem("address", address); 
             document.getElementById('ad').innerText = "";
         }
-        if (zip == "" || !zipPattern.test(zip)){
+        if (!zipPattern.test(zip) || emptyField){
             document.getElementById('zi').innerText = "Please enter a valid zip code (format: xxx xx)."; 
             return !isValid;
         } else{
             localStorage.setItem("zip", zip); 
             document.getElementById('zi').innerText = ""; 
         }
-        if (city.length < 2 || city.length > 50 ){
+        if (city.length < 2 || city.length > 50 || emptyField ){
             document.getElementById('ci').innerText = "City must be 2-50 characters.\r\n"; 
             return !isValid;
         } else{
             localStorage.setItem("city", city); 
             document.getElementById('ci').innerText = ""; 
         }
-        if (phone == "" || !phonePattern.test(phone) || phone.length > 50 ){
+        if (!phonePattern.test(phone) || phone.length > 50 || emptyField){
             document.getElementById('ph').innerText = "Please enter valid phone number.\r\n";
             return !isValid;  
         } else{
             localStorage.setItem("phone", phone); 
             document.getElementById('ph').innerText = ""; 
         }
-        if (email == "" || !emailPattern.test(email) ){
+        if (!emailPattern.test(email) || emptyField){
             document.getElementById('em').innerText = "Please enter a valid e-mail address.\r\n";
             return !isValid;
-            
         } else{
             localStorage.setItem("email", email);  
             document.getElementById('em').innerText = ""; 
-            const mal = localStorage.getItem("email"); 
-            document.getElementById("email").textContent = mal;
         }
         window.location.href = "order-confirmation.html"; 
         return isValid; 
@@ -186,6 +187,14 @@ function printValues(){
 for (let i = 0; i < localStorage.length; i++) {
     console.log("Key: " + localStorage.key(i));
     console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
+}
+
+function printPageArea(printArea){
+    var printContent = document.getElementById(printArea).innerHTML;
+    var originalContent = document.body.innerHTML;
+    document.body.innerHTML = printContent;
+    window.print();
+    document.body.innerHTML = originalContent;
 }
 
 

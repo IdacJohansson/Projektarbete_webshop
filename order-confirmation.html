@@ -24,10 +24,9 @@
     <nav class="menue">
         <a href="index.html">Shop</a>
         <a href="contact.html">Contact</a>
-        <a href="order-form.html" class="split"><i class="fa fa-truck"></i>Order</a>
     </nav>
     <br>
-    
+     
     <div class="container">
         <div class="modul">
             <section class="color-section">
@@ -37,6 +36,7 @@
                     </p>
             </section>
             <br>
+        <div id="printArea">
             <div class="column-product">
                 <br>
                 <div class="row">
@@ -49,6 +49,7 @@
                     </div>
                 </div>
             </div>
+        
             <br>
 
             <section class="order-details">
@@ -67,7 +68,6 @@
                 <div class="col">
                         
                         <div class="billingDetails" id="billing">
-                            
                             <div>
                             Name:<p id="first-name"></p>
                             </div> 
@@ -95,10 +95,14 @@
                 </div>
             </div>
             <hr class="line">
-            <img class="imgForm" src="images/Logo.png" alt="">
-            <div class="print-button"><button id="pbtn" value="pbtn" onclick="window.print();" class="btn btn-outline-light"><i class="fa fa-fw fa-print"></i>Print</button></div>
+            <img class="imgForm" src="images/Logo black.png" alt="">
+            <br>
+            <div class="print-button"><button id="pbtn" value="pbtn" onclick="printPageArea('printArea')" class="btn btn-outline-dark"><i class="fa fa-fw fa-print"></i>Print</button></div>
+        </div>
         </div>
     </div>
+    
+    
     <br>
 
 <footer class="footer">
@@ -111,7 +115,7 @@
         <a href="#" class="fa fa-linkedin-square link-light"></a>
       </section>
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-3">
         Copyright &copy; 2023 – Clothes&Stuff AB
     </div>
   </footer>

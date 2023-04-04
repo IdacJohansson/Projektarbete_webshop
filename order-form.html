@@ -22,13 +22,13 @@
     </nav>
     
 <!-- Här körs skriptet som hämtar info om produkten som ska köpas -->
-<div id="displayProduct"></div>
+
 
 <div id="order-form-container" class="container">
     <div class="box">
         <div class="col">
             <h1 class="headerOne">Hey let´s order!&nbsp;<i class="fa fa-truck"></i></h1><br>
-            <form action="" id="orderForm" onsubmit="">
+            <form id="orderForm">
                 <div class="row">
                     <div class="col form-floating">
                         <input type="text" id="firstname" class="form-control" placeholder="first-name">
@@ -43,7 +43,7 @@
     
                     </div>
                 <div class="form-floating">
-                    <input type="text" id="address" class="form-control" placeholder="address"  title="The address must contain 4-50 letters">
+                    <input type="text" id="address" class="form-control" placeholder="address" title="The address must contain 4-50 letters">
                     <label for="Address" class="form-label">Address</label>
                     <div id="ad" class="error"></div>
                 </div>
@@ -73,7 +73,9 @@
                     <div id="em" class="error"></div>
                 </div>
                 </div>
-                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck();" class="btn btn-outline-light"></i>Place order</button></div>
+                <br>
+                <div id="displayProduct"></div>
+                <div class="order-button"><button type="submit" id="btn" value="btn" onclick="return formValidationCheck();" class="btn btn-outline-dark"></i>Place order</button></div>
             </form>
         </div>
     </div>
@@ -91,7 +93,7 @@
             <a href="#" class="fa fa-linkedin-square link-light"></a>
           </section>
         </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3">
             Copyright &copy; 2023 – Clothes&stufff AB
         </div>
       </footer>
