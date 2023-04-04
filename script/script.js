@@ -77,10 +77,9 @@ function addToCartClick(productId) {
     localStorage.setItem('buyId', productId);
     window.location.href = "order-form.html";
 }
-    
+
 
 function formValidationCheck(){
-
 
     const orderForm = document.getElementById('orderForm'); 
     orderForm.addEventListener('submit', function(e){
@@ -151,28 +150,47 @@ function formValidationCheck(){
         } else{
             localStorage.setItem("email", email);  
             document.getElementById('em').innerText = ""; 
+            const mal = localStorage.getItem("email"); 
+            document.getElementById("email").textContent = mal;
         }
-         
         window.location.href = "order-confirmation.html"; 
         return isValid; 
         
  
     }); 
-     
-        
 }
 
-function setName(){ // test-funktion för att kunna printa ut billing&shipping - funkar ej 
+function printValues(){
+    const fnmn = localStorage.getItem("firstname")
+    document.getElementById("first-name").textContent = fnmn;  
 
-    const setFirstName = document.getElementById("firstname");
-    document.getElementById("first-name").innerHTML = setFirstName; 
+    const lnmn = localStorage.getItem("lastname");
+    document.getElementById("last-name").textContent = lnmn; 
+
+    const adrs = localStorage.getItem("address"); 
+    document.getElementById("address").textContent = adrs;
+
+    const cit = localStorage.getItem("city"); 
+    document.getElementById("city").textContent = cit;
+
+    const zico = localStorage.getItem("zip"); 
+    document.getElementById("zip").textContent = zico;
+
+    const phn = localStorage.getItem("phone"); 
+    document.getElementById("phone").textContent = phn;
+
+    const mal = localStorage.getItem("email"); 
+    document.getElementById("email").textContent = mal;
 }
-
 
 for (let i = 0; i < localStorage.length; i++) {
     console.log("Key: " + localStorage.key(i));
     console.log("Value: "+ localStorage.getItem(localStorage.key(i)));
 }
+
+
+
+
 
 
  
