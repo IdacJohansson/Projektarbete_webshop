@@ -305,7 +305,8 @@ article {
   background: url("images/contact.jpg"); 
   background-size: auto;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: auto;
+  height: 500px;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -313,7 +314,7 @@ article {
   padding-bottom: 50px;
 }
 
-#contact-info, textarea {
+#contact1, #contact2, #contact3, textarea {
   display: block;
   width: 100%;
   font-size: 12pt;
